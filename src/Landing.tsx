@@ -630,12 +630,12 @@ export default function Landing(): React.JSX.Element {
             <motion.button
               whileHover={{ scale: 1.05, borderColor: "#38bdf8" }}
               whileTap={{ scale: 0.96 }}
-              className="flex bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-[10px] md:text-[11px] font-extrabold tracking-[1px] py-2 px-3 sm:px-4 md:py-3 md:px-[22px] cursor-pointer items-center gap-1.5 sm:gap-2 md:gap-2.5 transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.4)] shrink-0"
+              className="flex bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-[13px] md:text-xs font-extrabold tracking-[1px] py-2.5 px-4 sm:px-5 md:py-3.5 md:px-7 cursor-pointer items-center gap-2 md:gap-3 transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.4)] shrink-0"
               onClick={() =>
                 (window.location.href = "https://dapp.inspireglobal.club/")
               }
             >
-              <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8] animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8] animate-pulse shrink-0" />
               Launch App
             </motion.button>
 
