@@ -607,7 +607,7 @@ export default function Landing(): React.JSX.Element {
               <img
                 src={logo}
                 alt="Inspire Global Logo"
-                className="h-10 sm:h-12 md:h-17 w-auto object-contain"
+                className="h-13 sm:h-12 md:h-17 w-auto object-contain"
               />
             </div>
           </div>
