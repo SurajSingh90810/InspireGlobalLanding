@@ -600,14 +600,14 @@ export default function Landing(): React.JSX.Element {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="w-full py-3.5 md:py-[18px] px-4 sm:px-6 md:px-8 sticky top-0 z-50 bg-[#030712]/90 backdrop-blur-xl border-b border-slate-800/90"
       >
-        <div className="flex items-center justify-between gap-4 max-w-[1360px] mx-auto relative">
-          <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center justify-between gap-2 sm:gap-4 max-w-[1360px] mx-auto relative">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
             <div className="w-1 h-8 md:h-10 bg-sky-400 rounded-sm shadow-[0_0_12px_rgba(56,189,248,0.8)]" />
             <div className="flex items-center gap-3">
               <img
                 src={logo}
                 alt="Inspire Global Logo"
-                className="h-12 sm:h-200 md:h-17 w-auto object-contain"
+                className="h-10 sm:h-12 md:h-17 w-auto object-contain"
               />
             </div>
           </div>
@@ -625,11 +625,12 @@ export default function Landing(): React.JSX.Element {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* 1. Changed "hidden sm:flex" to "flex" to show on mobile, and adjusted mobile padding (px-3) slightly to fit smaller screens */}
             <motion.button
               whileHover={{ scale: 1.05, borderColor: "#38bdf8" }}
               whileTap={{ scale: 0.96 }}
-              className="hidden sm:flex bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-[10px] md:text-[11px] font-extrabold tracking-[1px] py-2 px-4 md:py-3 md:px-[22px] cursor-pointer items-center gap-2 md:gap-2.5 transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.4)]"
+              className="flex bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-[10px] md:text-[11px] font-extrabold tracking-[1px] py-2 px-3 sm:px-4 md:py-3 md:px-[22px] cursor-pointer items-center gap-1.5 sm:gap-2 md:gap-2.5 transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.4)] shrink-0"
               onClick={() =>
                 (window.location.href = "https://dapp.inspireglobal.club/")
               }
@@ -637,10 +638,10 @@ export default function Landing(): React.JSX.Element {
               <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8] animate-pulse" />
               Launch App
             </motion.button>
-            {/* Mobile Nav Toggle */}
+
             <button
               aria-label="Toggle Menu"
-              className="lg:hidden text-sky-400 p-2 focus:outline-none"
+              className="lg:hidden text-sky-400 p-1 sm:p-2 focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
@@ -689,13 +690,7 @@ export default function Landing(): React.JSX.Element {
                     {link.label}
                   </a>
                 ))}
-                <button
-                  className="sm:hidden w-full max-w-[260px] bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-xs font-extrabold tracking-[1px] py-3 px-4 cursor-pointer flex justify-center items-center gap-2.5 mt-2 shadow-[0_4px_12px_rgba(0,0,0,0.4)]"
-                  onClick={() => (window.location.href = "/login")}
-                >
-                  <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8] animate-pulse" />
-                  ACCESS TERMINAL
-                </button>
+                {/* 2. Removed the duplicate mobile button from here */}
               </nav>
             </motion.div>
           )}
