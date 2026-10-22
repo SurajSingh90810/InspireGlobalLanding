@@ -630,12 +630,13 @@ export default function Landing(): React.JSX.Element {
               whileHover={{ scale: 1.05, borderColor: "#38bdf8" }}
               whileTap={{ scale: 0.96 }}
               className="hidden sm:flex bg-[#0c1a2e]/60 border border-sky-600 rounded-[30px] text-sky-100 text-[10px] md:text-[11px] font-extrabold tracking-[1px] py-2 px-4 md:py-3 md:px-[22px] cursor-pointer items-center gap-2 md:gap-2.5 transition-all duration-200 shadow-[0_4px_12px_rgba(0,0,0,0.4)]"
-              onClick={() => (window.location.href = "/login")}
+              onClick={() =>
+                (window.location.href = "https://dapp.inspireglobal.club/")
+              }
             >
               <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_10px_#38bdf8] animate-pulse" />
-              ACCESS TERMINAL
+              Launch App
             </motion.button>
-
             {/* Mobile Nav Toggle */}
             <button
               aria-label="Toggle Menu"
